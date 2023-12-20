@@ -1,0 +1,13 @@
+from .users import router as user_router
+from .tanks import router as tank_router
+from .llenaderas import router as llenadera_router
+from .bitacora import router as bitacora_router
+from .reloj import router as reloj_router
+from .barreras import router as barreras_router
+from .opc import router as opc_router
+from .auth import router as auth_router
+from .reportes import router as report_router
+from .esferas import router as esfera_router
+from .patines import router as patin_router
+from .cromatografo import router as croma_router
+from .bombas import router as bomba_router
