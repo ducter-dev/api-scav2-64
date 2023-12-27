@@ -47,7 +47,8 @@ async def lifespan(app: FastAPI):
     if connection.is_closed():
         print('Conexión cerrada')
         connection.connect()
-    
+    else: 
+        print('Conexión Error')
     connection.create_tables([
         User,
         TanksEntry,
@@ -80,7 +81,7 @@ async def lifespan(app: FastAPI):
     LogsServices.setNameFile()
     LogsServices.write('Iniciando api')
 
-    if OpcServices.conectarOPC():
+    if OpcServices.activo == True:
         print('conectado')
         LogsServices.write('Conectando a OPC Server.')
     else:

@@ -20,6 +20,7 @@ templates = Jinja2Templates(directory="templates")
 
 @router.post('/login')
 async def login(credentials: HTTPBasicCredentials):
+    print('Here ?')
     try:
         user = User.select().where(User.username == credentials.username).first()
         if user is None:
